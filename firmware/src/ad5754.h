@@ -39,6 +39,10 @@ public:
         sendCommand(command, data);
     }
 
+void setGate(uint8_t channel, bool state) {
+    setVoltage(channel, state ? 5.0 : 0.0);
+}
+
 private:
     uint8_t csPin;
 
